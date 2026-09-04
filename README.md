@@ -1,2 +1,2 @@
 # Actividades_Programacion_Analitica
-En este repositorio tiene todos los proyectos del curso de programación en analítica 
+Este repositorio es el espacio donde guardaré todos los ejercicios, talleres y proyectos que se trabajen a lo largo del curso de Programación para Analítica de Datos. Aquí se irán almacenando los avances, casos prácticos y ejemplos desarrollados durante las clases, con el fin de llevar un registro organizado del proceso de aprendizaje y del progreso a lo largo del curso.
