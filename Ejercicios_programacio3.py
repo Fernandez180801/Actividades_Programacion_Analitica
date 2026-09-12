@@ -54,6 +54,7 @@ perfil("ana",20,"bogota")
 def perfil(nombre, edad, ciudad):
  print(nombre, edad, ciudad)
 perfil(edad=20, nombre="Ana", ciudad="Bogota")
+
 # %% Valor por defecto
 def saludar(nombre, saludo= "hola"):
  print(saludo, nombre)
@@ -65,6 +66,24 @@ def saludar(nombre, saludo="hola"):
 saludar("luis", "buen dia" )
 
 # %% Orden de los parámetros
-def registrar(cantidad=1, producto):
- print(producto, cantidad)
+def registrar(producto, cantidad=1):
+    print(producto, cantidad)
+# %% Una lista como argumento
+def total(precios):
+    suma = 0
+    for p in precios:
+        suma = suma + p
+    return suma
+
+print(total([1200, 950, 3400]))
+# %% Devolver un valor
+def doble(n):
+ return n * 2
+print(doble(5))
+
+# %% Función sin return
+def saludo(nombre):
+ print("Hola,", nombre)
+x = saludo("Ana")
+print(x)
 # %%
