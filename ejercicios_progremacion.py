@@ -181,3 +181,33 @@ for c in clientes:
      print(grupo)
 
 # %%
+inventario = [
+    {"producto": "Marcador", "stock": 4},
+    {"producto": "Cuaderno", "stock": 20},
+    {"producto": "Borrador", "stock": 2}
+]
+bajos = []
+
+for item in inventario:
+    if item["stock"] < 5:
+        bajos.append(item["producto"])
+
+print(bajos)
+
+# %% 
+transacciones = [
+    {"cliente": "Ana", "tipo": "Credito", "monto": 120000},
+    {"cliente": "Luis", "tipo": "Debito", "monto": 85000},
+    {"cliente": "Marta", "tipo": "Credito", "monto": 210000}
+]
+total_creditos = 0
+clientes = []
+
+for t in transacciones:
+    if t["tipo"] == "Credito" and t["monto"] >= 100000:
+        total_creditos += t["monto"]
+        clientes.append(t["cliente"])
+
+print(total_creditos)
+print(clientes)
+# %%
