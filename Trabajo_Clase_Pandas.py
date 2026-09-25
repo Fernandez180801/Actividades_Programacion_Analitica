@@ -111,13 +111,30 @@ print("Propina promedio en el almuerzo:", propina_promedio(almuerzos), "%")
 #   el valor promedio de la cuenta, y úsela para comparar cena y almuerzo.
 
 # Reto 1: su código aquí
-
+fin_de_semana = df[df["dia"].isin(["Sat", "Sun"])]
+entre_semana = df[~df["dia"].isin(["Sat", "Sun"])]
+ 
+print("\nReto 1 - Fin de semana")
+print("Propina promedio fin de semana:", propina_promedio(fin_de_semana), "%")
+print("Propina promedio entre semana: ", propina_promedio(entre_semana), "%")
 
 # Reto 2: su código aquí
-
+mesas_grandes = df[df["personas"] >= 4]
+mesas_pequenas = df[df["personas"] <= 2]
+ 
+print("\nReto 2 - Mesas grandes")
+print("Propina promedio mesas de 4 o más:", propina_promedio(mesas_grandes), "%")
+print("Propina promedio mesas de 1 o 2:  ", propina_promedio(mesas_pequenas), "%")
 
 # Reto 3: su código aquí
-
+def cuenta_promedio(tabla):
+    """KPI: valor promedio de la cuenta de la tabla."""
+    return round(tabla["cuenta"].mean(), 2)
+ 
+ 
+print("\nReto 3 - Cuenta promedio")
+print("Cuenta promedio en la cena:    ", cuenta_promedio(cenas))
+print("Cuenta promedio en el almuerzo:", cuenta_promedio(almuerzos))
 
 # 7. Cierre
 # Con una URL, tres transformaciones y una función usted calculó un KPI
